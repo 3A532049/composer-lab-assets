@@ -3,6 +3,13 @@
 require __DIR__.'/bootstrap.php';
 require './vendor/autoload.php';
 
+//date_default_timezone_set('Asia/Taipei');
+
+use Carbon\Carbon;
+Carbon::setLocale('zh-tw');
+
+
+
 // connect to dabase
 try {
     $dsn = 'mysql:host='.DB_HOST.';port='.DB_PORT.';dbname='.DB_DATABASE.';charset='.DB_CHARSET;
